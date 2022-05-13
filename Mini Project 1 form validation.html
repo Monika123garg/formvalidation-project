@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<script type="text/javascript">
+function pqr(v){
+var v=document.moni.fname.value;  
+if(!isNaN(v)){
+ alert("invalid NAME");
+return false;}}
+function myFunction(x) {
+  x.style.background = "yellow";
+}
+
+function f1()
+{
+var f=document.moni.user.value;
+var name=document.moni.fname.value;  
+var age=document.moni.age.value;  
+  var x=document.moni.email.value;
+var y=document.moni.aadhar.value;
+var z=document.moni.pan.value;
+var d=document.moni.date.value;
+var u=document.moni.userid.value;
+var t=document.moni.Telephone.value;
+var a=document.moni.address.value;
+var atposition=x.indexOf("@");  
+var dotposition=x.lastIndexOf(".");  
+if (u==null || u=="")
+ {  
+  alert(" ENTER YOUR USER ID");  
+  return false;  
+}
+if(isNaN(u))
+{
+ alert("ENTER NUMERIC VALUE ONLY IN YOUR USER ID");  ;
+return false;
+}
+if (f==null || f=="")
+ {  
+  alert(" father Name can't be blank");  
+  return false;  
+}
+if(!isNaN(f))
+{
+ alert("INVALID FATHER NAME");  
+return false;
+}
+if (name==null || name=="")
+{  
+  alert("Name can't be blank");  
+  return false;  
+}
+if(!isNaN(name))
+{
+ alert("INVALID NAME");  ;
+return false;
+}
+if (age==null || age=="")
+{  
+  alert("PLEASE ENTER YOUR AGE");  
+  return false;  
+}
+else if ((age<=18) ||( age>=35)){
+  alert("your age must be in range 18 and 35");  
+  return false;  
+  }   
+if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+  alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
+  return false;  
+  }  
+if (y==null || y=="")
+{  
+  alert("Adhar no. is required");  
+  return false;  
+}
+if(isNaN(y))
+{
+ alert("ENTER A VALID AADHAR NO.");  ;
+return false;
+}
+else if(y.length<12){  
+  alert("Aadhar N0.must be 12 digits long.");  
+  return false;  
+  }  
+if (z==null || z=="")
+{  
+  alert("PAN no. is required");  
+  return false;  
+}
+if(isNaN(z))
+{
+ alert("ENTER A VALID PAN NO.");  ;
+return false;
+}
+else if(z.length<14){  
+  alert("PAN N0.must be 14 digits long.");  
+  return false;}  
+if (d==null || d=="")
+{  
+  alert("enter your date of birth");  
+  return false;  
+}    
+if (t==null || t=="")
+{  
+  alert("ENTER YOUR CONTACT NO.");  
+  return false;  
+}    
+if(isNaN(t))
+{
+ alert("ENTER A VALID CONTACT NUMBER.");  ;
+return false;
+}
+else if(t.length<10){  
+  alert("Please Enter a VALID NUMBER.");  
+  return false;}     
+if (a==null || a=="")
+{  
+  alert("ENTER YOUR ADDRESS DETAILS.");  
+  return false;  
+}                                                                                                                                                           
+else
+{
+ alert("DO YOU WANT TO SUBMIT YOUR DETAILS?");  
+document.location.href="xx.html";
+}}
+</script>	 
+</head> 
+
+<body background="https://media.istockphoto.com/photos/white-empty-surface-and-office-building-as-background-picture-id1186042907" >
+ <p><center><h1><font color ="blue">  EMPLOYEE REGISTRATION FORM </font></h1></center></p><hr/>
+<center>
+<table bgcolor="pink" cellspacing="0" width ="600" height="700" border="15" bordercolor="white">    
+<tr> <td>    	
+<form name="moni" action="D:\MONIKA GARG 1900680100200\xx.html" onsubmit="return f1()" >
+<p><center><h1>Enter Your Details Here</h1></center></p>  
+<p><b><h3>  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+EMPLOYEE ID:&nbsp&nbsp
+<input type="text" size=40 placeholder="YOUR ID" name="userid"onfocus="myFunction(this)" required ><br><br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+Name:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="text" size=40 placeholder="YOUR NAME" name="fname"onchange="pqr(this)" id="name"><br><br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+Father's  Name:&nbsp&nbsp&nbsp&nbsp&nbsp
+ <input type="text" size=40 placeholder="YOUR FATHER NAME" name="user" onfocus="myFunction(this)"id="user"><br><br>
+ &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+ Email Address:&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="email" size=40 placeholder="YOUR EMAIL" name="email" onfocus="myFunction(this)" ><br><br>
+ &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+ Address:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="text" size=40 placeholder="YOUR ADDRESS" name="address" onfocus="myFunction(this)"required><br><br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  Telephone:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="text" size=40 placeholder="10-digit no." name="Telephone" onfocus="myFunction(this)"><span id="numbertext"></span><br><br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  Aadhar No:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="text" size=40 placeholder="12-digit no." name="aadhar" onfocus="myFunction(this)" ><br><br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  PAN No:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="text" size=40 placeholder="14-digit no." name="pan"onfocus="myFunction(this)" ><br><br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  DOB:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="date" size=40 placeholder="date/month/year" name="date" required="required" ><br><br>
+ &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp
+ AGE: &nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="text" size=40 placeholder="your age" name="age"onfocus="myFunction(this)" id="fage" ><br><br>
+ &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+GENDER:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<input type="radio" name="gender" value="Male"/>Male
+<input type="radio" name="gender" value="Female"/>Female
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+ANY OTHER DATAILS:<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+ <textarea cols="20" rows="4" name="details"> Type here....</textarea></p>  <br>
+<center><input type="submit" id="submit" value="SUBMIT" onclick="f1()"/></center><br><br>
+<center><input type="reset" value="Reset" name="Reset"> </center>
+</h3></b></p><br><br></p>	 
+</form></tr></td></table></center>
+</body> 
+</html>
